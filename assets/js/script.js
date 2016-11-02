@@ -155,11 +155,11 @@ jQuery( document ).ready(function( $ ) {
 	/**
 	 * Process views, rating.
 	 */
-	if ( $( '.cherry-trend-views__count' ).length > 0 && 0 != cherryTrendPosts.cache ) {
+	if ( $( '.cherry-trend-views__count' ).length > 0 && 0 !== cherryTrendPosts.cache ) {
 		$( '.cherry-trend-views__count' ).TrendPostsView();
 	}
 
-	if ( $( '.cherry-trend-rating__stars' ).length > 0 && 0 != cherryTrendPosts.cache ) {
+	if ( $( '.cherry-trend-rating__stars' ).length > 0 && 0 !== cherryTrendPosts.cache ) {
 		$( '.cherry-trend-rating__stars' ).TrendPostsRating();
 	}
 

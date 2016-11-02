@@ -16,7 +16,7 @@ if ( ! defined( 'WPINC' ) ) {
 <div class="cherry-trend-widget-list__item cherry-trend-post">
 	<?php echo $image; ?>
 	<div class="cherry-trend-post__header">
-		<?php echo '<h5 class="cherry-trend-post__title">' .  $title . '</h5>' ?>
+		<?php echo '<h5 class="cherry-trend-post__title">' . $title . '</h5>'; ?>
 	</div>
 	<div class="cherry-trend-post__content">
 		<?php echo $excerpt; ?>
