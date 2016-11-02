@@ -1,4 +1,4 @@
-"**/*.min.js
+**/*.min.js
 cherry-framework/modules/cherry-js-core/assets/js/cherry-js-core.js
 cherry-framework/modules/cherry-post-formats-api/assets/js/cherry-post-formats.js
 cherry-framework/modules/cherry-ui-elements/inc/ui-elements/ui-checkbox/assets/ui-checkbox.js
