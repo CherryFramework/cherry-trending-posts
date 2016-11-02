@@ -327,8 +327,10 @@ if ( ! class_exists( 'Cherry_Trending_Posts_Callback_Rating' ) ) {
 				}
 
 				$rating_meta = wp_parse_args( $rating_meta, $this->meta_components );
+				$rating_meta = array_map( 'esc_attr', $rating_meta );
 
-				$votes  = '<span class="cherry-trend-rating__votes">' . $rating_meta['votes'] . '</span>';
+				$_votes = sprintf( _n( '%s vote', '%s votes', $rating_meta['votes'], 'cherry-trending-posts' ), $rating_meta['votes'] );
+				$votes  = '<span class="cherry-trend-rating__votes">' . $_votes . '</span>';
 				$rating = '<span class="cherry-trend-rating__val">' . $rating_meta['rate'] . '</span>';
 
 				$args = array(

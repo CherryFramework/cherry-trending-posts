@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: blank\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-21 12:51+0200\n"
+"POT-Creation-Date: 2016-11-02 14:37+0200\n"
 "PO-Revision-Date: 2015-04-06 06:14+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: Cherry Team <support@cherryframework.com>\n"
@@ -15,17 +15,9 @@ msgstr ""
 "esc_attr__;_x:1,2c;_n:1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SearchPath-0: .\n"
-
-#: cherry-framework/modules/cherry-ui-elements/inc/ui-elements/ui-stepper/ui-stepper.php:63
-msgid "Step Up"
-msgstr ""
-
-#: cherry-framework/modules/cherry-ui-elements/inc/ui-elements/ui-stepper/ui-stepper.php:63
-msgid "Step Down"
-msgstr ""
 
 #: inc/class-trending-posts-callback-rating.php:105
 #, php-format
@@ -33,6 +25,7 @@ msgid "%1$s (%2$s. Average %3$s of %4$s)"
 msgstr ""
 
 #: inc/class-trending-posts-callback-rating.php:135
+#: inc/class-trending-posts-callback-rating.php:332
 #, php-format
 msgid "%s vote"
 msgid_plural "%s votes"
@@ -43,6 +36,9 @@ msgid "Displays the most popular/trending posts on your blog."
 msgstr ""
 
 #: inc/class-trending-posts-widget.php:49
+msgid "Cherry Trending Posts"
+msgstr ""
+
 #: inc/class-trending-posts-widget.php:53
 msgid "Trending Posts"
 msgstr ""
@@ -113,8 +109,7 @@ msgstr ""
 
 #: inc/class-trending-posts-widget.php:142
 msgid ""
-"Number of post to pass over (ignored when `posts_per_page`=>-1 "
-"(show all posts) is used)"
+"Offset (ignored when `posts_per_page`=>-1 (show all posts) is used)"
 msgstr ""
 
 #: inc/class-trending-posts-widget.php:150
@@ -146,17 +141,7 @@ msgstr ""
 msgid "Button text"
 msgstr ""
 
-#: inc/class-trending-posts-widget.php:320
-#, php-format
-msgid "%s comment"
-msgstr ""
-
-#: inc/class-trending-posts-widget.php:321
-#, php-format
-msgid "%s comments"
-msgstr ""
-
-#: inc/class-trending-posts-widget.php:391
+#: inc/class-trending-posts-widget.php:401
 #, php-format
 msgid "%1$s (%2$s)"
 msgstr ""

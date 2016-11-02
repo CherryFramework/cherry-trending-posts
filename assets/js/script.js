@@ -86,6 +86,7 @@
 				nonce: cherryTrendPosts.nonce
 			}
 		}).done( function( response ) {
+			console.log(response);
 			if ( ! response.success ) {
 				return;
 			}
@@ -155,11 +156,12 @@ jQuery( document ).ready(function( $ ) {
 	/**
 	 * Process views, rating.
 	 */
-	if ( $( '.cherry-trend-views__count' ).length > 0 && 0 !== cherryTrendPosts.cache ) {
+	if ( $( '.cherry-trend-views__count' ).length > 0 && 0 !== parseInt( cherryTrendPosts.cache ) ) {
 		$( '.cherry-trend-views__count' ).TrendPostsView();
 	}
 
-	if ( $( '.cherry-trend-rating__stars' ).length > 0 && 0 !== cherryTrendPosts.cache ) {
+	if ( $( '.cherry-trend-rating__stars' ).length > 0 && 0 !== parseInt( cherryTrendPosts.cache ) ) {
+		console.log('adadad');
 		$( '.cherry-trend-rating__stars' ).TrendPostsRating();
 	}
 
