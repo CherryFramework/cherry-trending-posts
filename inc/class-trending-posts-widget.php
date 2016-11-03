@@ -374,8 +374,13 @@ if ( ! class_exists( 'Cherry_Trending_Posts_Widget' ) ) {
 					break;
 				}
 
-				$title = get_the_title();
+				$image_args = wp_parse_args( array(
+					'visible' => has_post_thumbnail(),
+				), $image_args );
+
 				$image = $this->utility->media->get_image( $image_args );
+
+				$title = get_the_title();
 
 				if ( $title_length > 0 ) {
 					$title = wp_html_excerpt( $title, $title_length, $title_trimmed_more );
