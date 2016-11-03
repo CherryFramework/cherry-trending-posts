@@ -13,8 +13,8 @@ Adds rating and views count for posts and cutom post types.
 == Installation ==
 1. Upload \"cherry-trending-posts\" folder to the \"/wp-content/plugins/\" directory
 2. Activate the plugin through the \"Plugins\" menu in WordPress
-3. Place `<?php do_action( 'tm_trending_posts_display_rating' ); ?>` in your templates (index.php or single.php) within the loop.
-4. Place `<?php do_action( 'tm_trending_posts_display_views' ); ?>` in your templates (index.php or single.php) within the loop.
+3. Place `<?php do_action( 'cherry_trend_posts_display_rating' ); ?>` in your templates (index.php or single.php) within the loop.
+4. Place `<?php do_action( 'cherry_trend_posts_display_views' ); ?>` in your templates (index.php or single.php) within the loop.
 
 And of course, you will find new \"Trending Post\" widget in \"Appearance - Widgets\" menu in your WordPress admin panel.
 
