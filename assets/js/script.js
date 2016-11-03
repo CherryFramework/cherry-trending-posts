@@ -86,7 +86,6 @@
 				nonce: cherryTrendPosts.nonce
 			}
 		}).done( function( response ) {
-			console.log(response);
 			if ( ! response.success ) {
 				return;
 			}
@@ -134,6 +133,8 @@ jQuery( document ).ready(function( $ ) {
 			return ! 1;
 		}
 
+		$container.find( '.cherry-trend-stars__item' ).removeClass( 'cherry-trend-star--active' );
+		$item.addClass( 'cherry-trend-star--active' );
 		$container.addClass( 'cherry-trend-stars--processing' );
 
 		$.ajax({
@@ -161,7 +162,6 @@ jQuery( document ).ready(function( $ ) {
 	}
 
 	if ( $( '.cherry-trend-rating__stars' ).length > 0 && 0 !== parseInt( cherryTrendPosts.cache ) ) {
-		console.log('adadad');
 		$( '.cherry-trend-rating__stars' ).TrendPostsRating();
 	}
 

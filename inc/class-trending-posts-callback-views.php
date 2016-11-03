@@ -92,10 +92,10 @@ if ( ! class_exists( 'Cherry_Trending_Posts_Callback_Views' ) ) {
 			$views = get_post_meta( $post_id, $this->meta_key, true );
 			$views = absint( $views );
 
-			$format = apply_filters(
-				'cherry_trend_posts_views_format',
+			$format = apply_filters( 'cherry_trend_posts_views_format',
 				'<span class="cherry-trend-views__count" data-id="%2$s">%1$s</span>',
-				$views, $post_id
+				$views,
+				$post_id
 			);
 
 			return sprintf( $format, $views, $post_id );

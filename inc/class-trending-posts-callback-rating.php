@@ -100,7 +100,7 @@ if ( ! class_exists( 'Cherry_Trending_Posts_Callback_Rating' ) ) {
 			 * @since 1.0.0
 			 * @param array $defaults
 			 */
-			$defaults = apply_filters( 'cherry_trend_posts_rating_defauls', array(
+			$defaults = apply_filters( 'cherry_trend_posts_rating_defaults', array(
 				'post_id'     => get_the_ID(),
 				'format'      => esc_html__( '%1$s (%2$s. Average %3$s of %4$s)', 'cherry-trending-posts' ),
 				'is_disabled' => false,

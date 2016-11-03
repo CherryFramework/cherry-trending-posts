@@ -53,13 +53,8 @@
 	}
 }
 
+.cherry-trend-stars--rate-disabled .cherry-trend-star,
 .cherry-trend-stars--processing .cherry-trend-star {
-	&::before {
-		content: '\f005';
-	}
-}
-
-.cherry-trend-stars--rate-disabled .cherry-trend-star {
 	cursor: default;
 	pointer-events: none;
 }
