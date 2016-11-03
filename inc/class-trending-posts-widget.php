@@ -304,11 +304,10 @@ if ( ! class_exists( 'Cherry_Trending_Posts_Widget' ) ) {
 			);
 
 			$image_args = apply_filters( 'cherry_trend_posts_image_args', array(
-				'visible'                => has_post_thumbnail(),
-				'size'                   => 'medium',
-				'mobile_size'            => 'thumbnail',
-				'html'                   => '<figure class="cherry-trend-post__thumbnail"><a href="%1$s" %2$s><img class="cherry-trend-post__img" src="%3$s" alt="%4$s" %5$s></a></figure>',
-				'class'                  => 'cherry-trend-post__thumbnail-link',
+				'size'        => 'medium',
+				'mobile_size' => 'thumbnail',
+				'html'        => '<figure class="cherry-trend-post__thumbnail"><a href="%1$s" %2$s><img class="cherry-trend-post__img" src="%3$s" alt="%4$s" %5$s></a></figure>',
+				'class'       => 'cherry-trend-post__thumbnail-link',
 			), $args, $instance );
 
 			$excerpt_args = array(
