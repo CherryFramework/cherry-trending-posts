@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Cherry Trending Posts
- * Plugin URI:
+ * Plugin URI:  https://github.com/CherryFramework/cherry-trending-posts
  * Description: Adds rating and views count for posts and custom post types.
- * Version:     0.0.9
+ * Version:     1.0.0
  * Author:      Template Monster
  * Author URI:  http://www.templatemonster.com/
  * Text Domain: cherry-trending-posts
@@ -134,7 +134,7 @@ if ( ! class_exists( 'Cherry_Trending_Posts' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			define( 'CHERRY_TREND_POSTS_VERSION', '0.0.9' );
+			define( 'CHERRY_TREND_POSTS_VERSION', '1.0.0' );
 
 			/**
 			 * Set constant path to the plugin directory.
