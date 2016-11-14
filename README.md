@@ -7,7 +7,7 @@
 * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
 ## Description ##
-Adds rating and views count for posts and cutom post types.
+Adds rating and views count for posts and custom post types.
 
 ## Installation ##
 1. Upload "cherry-trending-posts" folder to the "/wp-content/plugins/" directory
