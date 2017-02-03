@@ -332,7 +332,7 @@ if ( ! class_exists( 'Cherry_Trending_Posts_Widget' ) ) {
 			$comments_args = apply_filters( 'cherry_trend_posts_comments_args', array(
 				'visible' => $meta_data['comments'],
 				'class'   => 'cherry-trend-post__meta-comments',
-				'sufix'   => _n_noop( '%s comment', '%s comments', 'trending-posts' ),
+				'sufix'   => _n_noop( '%s comment', '%s comments', 'cherry-trending-posts' ),
 			), $args, $instance );
 
 			$author_args = apply_filters( 'cherry_trend_posts_author_args', array(
