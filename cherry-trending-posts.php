@@ -62,7 +62,7 @@ if ( ! class_exists( 'Cherry_Trending_Posts' ) ) {
 			add_action( 'plugins_loaded', array( $this, 'lang' ), 2 );
 
 			// Set up a Cherry core.
-			add_action( 'after_setup_theme', require( trailingslashit( __DIR__ ) . 'cherry-framework/setup.php' ), 0 );
+			add_action( 'after_setup_theme', require( trailingslashit( dirname( __FILE__ ) ) . 'cherry-framework/setup.php' ), 0 );
 			add_action( 'after_setup_theme', array( $this, 'get_core' ), 1 );
 			add_action( 'after_setup_theme', array( 'Cherry_Core', 'load_all_modules' ), 2 );
 
