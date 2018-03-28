@@ -411,6 +411,8 @@ if ( ! class_exists( 'Cherry_Trending_Posts_Widget' ) ) {
 
 			endwhile;
 
+			wp_reset_postdata();
+
 			$this->widget_end( $args );
 			$this->reset_widget_data();
 
