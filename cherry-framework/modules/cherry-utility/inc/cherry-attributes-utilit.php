@@ -7,7 +7,7 @@
  * @author     Cherry Team <support@cherryframework.com>
  * @copyright  Copyright (c) 2012 - 2015, Cherry Team
  * @link       http://www.cherryframework.com/
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-3.0.html
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html
  */
 
 // If this file is called directly, abort.
@@ -52,10 +52,13 @@ if ( ! class_exists( 'Cherry_Attributes_Utilit' ) ) {
 			$html = '' ;
 
 			if ( filter_var( $args['visible'], FILTER_VALIDATE_BOOLEAN ) && 0 !== $args['length'] ) {
-				$title = $title_cut = ( 'post' === $type ) ? $object->post_title : $object->name ;
-				$title = ( $args['title'] ) ? 'title="' . $args['title'] . '"' : 'title="' . $title . '"' ;
+				$title     = ( 'post' === $type ) ? $object->post_title : $object->name;
+				$title_cut = $title;
+
+				$title     = ( $args['title'] ) ? 'title="' . $args['title'] . '"' : 'title="' . $title . '"';
 				$title_cut = $this->cut_text( $title_cut, $args['length'], $args['trimmed_type'], $args['ending'] );
-				$link = ( 'post' === $type ) ? $this->get_post_permalink() : $this->get_term_permalink( $object->term_id );
+
+				$link       = ( 'post' === $type ) ? $this->get_post_permalink() : $this->get_term_permalink( $object->term_id );
 				$html_class = ( $args['class'] ) ? 'class="' . $args['class'] . '"' : '' ;
 
 				$html = sprintf( $args['html'], $html_class, $link, $title, $title_cut );
@@ -92,11 +95,12 @@ if ( ! class_exists( 'Cherry_Attributes_Utilit' ) ) {
 			);
 			$args = wp_parse_args( $args, $default_args );
 			$html = '' ;
+			$content_type = $args['content_type'];
 
 			if ( filter_var( $args['visible'], FILTER_VALIDATE_BOOLEAN ) ) {
 				if ( 'term' === $type ) {
 					$text = $object->description;
-				} elseif ( 'post_content' === $args['content_type'] || 'post_excerpt' === $args['content_type'] && empty( $object->$args['content_type'] ) ) {
+				} elseif ( 'post_content' === $content_type || 'post_excerpt' === $content_type && empty( $object->$content_type ) ) {
 					$text = get_the_content();
 				} else {
 					$text = get_the_excerpt();
@@ -111,7 +115,9 @@ if ( ! class_exists( 'Cherry_Attributes_Utilit' ) ) {
 				}
 			}
 
-			$html = apply_filters( 'the_content', $html );
+			if ( 'post_content' === $content_type && -1 === $args['length'] ) {
+				$html = apply_filters( 'the_content', $html );
+			}
 
 			return $this->output_method( $html, $args['echo'] );
 		}

@@ -7,7 +7,7 @@
  * @author     Cherry Team <support@cherryframework.com>
  * @copyright  Copyright (c) 2012 - 2015, Cherry Team
  * @link       http://www.cherryframework.com/
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-3.0.html
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html
  */
 
 // If this file is called directly, abort.
@@ -43,7 +43,6 @@ if ( ! class_exists( 'Cherry_Meta_Data_Utilit' ) ) {
 				'delimiter'	=> ' ',
 				'before'	=> '<div class="post-terms">',
 				'after'		=> '</div>',
-				'class'		=> 'post-term',
 				'echo'		=> false,
 			);
 			$args = wp_parse_args( $args, $default_args );
@@ -128,7 +127,8 @@ if ( ! class_exists( 'Cherry_Meta_Data_Utilit' ) ) {
 
 			$args['suffix'] = ( isset( $args['sufix'] ) ) ? $args['sufix'] : $args['suffix'];
 
-			$html = $count = '' ;
+			$html  = '';
+			$count = '';
 
 			if ( filter_var( $args['visible'], FILTER_VALIDATE_BOOLEAN ) ) {
 				$post_type = get_post_type( $object->ID );
