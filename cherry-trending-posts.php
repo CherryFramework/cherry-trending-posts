@@ -3,7 +3,7 @@
  * Plugin Name: Cherry Trending Posts
  * Plugin URI:  https://github.com/CherryFramework/cherry-trending-posts
  * Description: Adds rating and views count for posts and custom post types.
- * Version:     1.0.1
+ * Version:     1.0.2
  * Author:      Zemez
  * Author URI:  https://zemez.io/wordpress/
  * Text Domain: cherry-trending-posts
@@ -134,7 +134,7 @@ if ( ! class_exists( 'Cherry_Trending_Posts' ) ) {
 			 *
 			 * @since 1.0.0
 			 */
-			define( 'CHERRY_TREND_POSTS_VERSION', '1.0.1' );
+			define( 'CHERRY_TREND_POSTS_VERSION', '1.0.2' );
 
 			/**
 			 * Set constant path to the plugin directory.
